@@ -1,0 +1,208 @@
+:root {
+    --dark-blue: #1F2937;
+    --blue: #3882F6;
+    --grey: #E5E7Eb;
+}
+
+* {
+    font-family: Roboto, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+    min-height: 100vh;
+}
+
+.header, .footer,
+.content>* {
+    padding-left: 128px;
+    padding-right: 156px;
+}
+
+.header {
+    background-color: var(--dark-blue);
+    color: #f9faf8;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    
+}
+
+.content {
+    flex-grow: 1;
+}
+
+h1 {
+    font-size: 48px;
+    font-weight: extra-bold;
+    margin: 0px;
+}
+
+p {
+    margin-bottom: 2vh;
+    margin-top: 0.5vh;
+}
+
+.logo {
+    font-weight: 800;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style-type: none;
+    display: flex;
+    gap: 32px;
+}
+
+.intro {
+    color: white;
+    background-color: var(--dark-blue);
+    display: flex;
+    gap: 24px;
+    justify-content: space-between;
+    padding-top: 10%;
+    padding-bottom: 10%; 
+}
+
+.intro .main {
+    width: 50%;
+    /* without max-width/width, the text will try to fit itself on one straight line as much as possible. 
+    If there other elements with words on the same block it will start to wrap after a certain width.*/
+    /* When .main is set to width and .placeholder to width, both of them will be of equal length. 
+    With .main's max-width set, main would be a bit longer. Also, the spacing will be contributed by the placeholder instead. */
+
+    /* flex: 1 1 0; */
+}
+
+.intro .placeholder {
+    background-color: grey;
+    width: 50%;
+    /* if max-width is set, the block will not try to fill up the space. */
+    /* (Width for .main will fill up space because the text is long enough I suppose. */
+
+
+    /* flex: 1 1 0; */
+}
+
+.info {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2vh;
+    padding-top: 4vh;
+    padding-bottom: 16vh;
+}
+
+h2 {
+    font-weight: extra-bold;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 30vw;
+    align-items: center;
+}
+
+.card .placeholder {
+    border: 4px solid skyblue;
+    border-radius: 10px;
+    width: 10vw;
+    height: 10vw;
+}
+
+.card-container {
+    display: flex;
+    gap: 1%;
+    justify-content: center;
+}
+
+.quote {
+    background-color: var(--grey);
+    display: flex;
+    flex-direction: column;
+    padding-top: 16vh;
+    padding-bottom: 16vh;
+    align-items: center;
+    
+}
+
+.quote .text {
+    font-size: 36px;
+    font-style: italic;
+    font-weight: lighter;
+    color: var(--dark-blue);
+    width: 50vw;
+}
+
+.quote-author {
+    text-align: right;
+    width: 50vw;
+    font-weight: bold;
+
+}
+
+.action {
+    
+}
+
+.action-card {
+    background-color: var(--blue);
+    box-sizing: border-box;
+    display: flex;
+    padding: 3% 8%;
+    margin: 5% auto;
+    border-radius: 16px;
+    color: white;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+}
+
+.action .text {
+    font-weight: bold;
+    font-size: medium;
+}
+
+.action .subtext {
+    font-size: small;
+}
+
+.action .card {
+    width: 50%;
+    
+}
+
+.footer {
+    background-color: var(--dark-blue);
+    text-align: center;
+    font-size: smaller;
+    color: white;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+
+}
+
+.button-1, .button-2 {
+    box-sizing: border-box;
+    width: 6vw;
+    border: 2px solid transparent;
+    border-radius: 6px;
+    background-color: var(--blue);
+    color: white;
+    font-weight: bold;
+    padding: 2px 0px;
+}
+
+
+.button-2 {
+    color: white;
+    border-color: white;
+}
